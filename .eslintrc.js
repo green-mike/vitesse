@@ -20,5 +20,6 @@ module.exports = {
       ignores: ['pre', 'textarea', ...INLINE_ELEMENTS],
     }],
     '@typescript-eslint/brace-style': 'off',
+    'space-before-function-paren': 'off',
   },
 };
