@@ -1,36 +1,37 @@
-import { Given, Then, When } from '@badeball/cypress-cucumber-preprocessor'
+import { Given, Then, When } from '@badeball/cypress-cucumber-preprocessor';
 
 Given('open index page', () => {
-  cy.visit('/')
-})
+  cy.visit('/');
+});
 
 Then('I see home layout', () => {
   cy.contains('[Home Layout]')
-    .should('exist')
-})
+    .should('exist');
+});
 When('type {string} then enter', (name) => {
   cy.get('#input')
-    .type(`${name}{Enter}`)
-})
+    .type(`${name}{Enter}`);
+});
 
 Then('I see page redirect to {string}', (path) => {
-  cy.url().should('eq', `http://localhost:3333${path}`)
-})
+  cy.url().should('eq', `http://localhost:3333${path}`);
+});
 Then('I see default layout', () => {
   cy.contains('[Default Layout]')
-    .should('exist')
-})
+    .should('exist');
+});
 Given('redirect to {string}', (path: string) => {
-  cy.visit(path)
-})
+  cy.visit(path);
+});
 When('click back button', () => {
   cy.findByRole('button', { name: /back/i })
-    .click()
-})
+    .click();
+});
 When('click about button', () => {
   cy.get('[title="About"]')
-    .click()
-})
-Then('pre language exist', () => {
-  cy.get('pre.language-js').should('exist')
-})
+    .click();
+});
+Then('shiki exist', () => {
+  cy.get('.shiki')
+    .should('exist');
+});

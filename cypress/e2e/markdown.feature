@@ -8,8 +8,8 @@ Feature: Show Markdown
     When click about button
     Then I see page redirect to "/about"
 
-  Scenario: pre language exist
-    Then pre language exist
+  Scenario: shiki exists
+    Then shiki exist
 
 
 
